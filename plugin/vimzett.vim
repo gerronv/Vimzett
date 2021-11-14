@@ -1,29 +1,7 @@
-"BASIC KEY MAPPINGS
+"KEY MAPPINGS
 "This is the interface for zettel creation.
 nnoremap <leader>z :set operatorfunc=<SID>ZettelCreationHandler<cr>g@
 vnoremap <leader>z :<c-u>call <SID>ZettelCreationHandler(visualmode())<cr>
-
-"HTML CONVNIENCE MAPPINGS
-nnoremap <leader>q :Vimwiki2HTML<cr>
-nnoremap <leader>qa :VimwikiAll2HTML<cr>
-
-"TAG CONVENIENCE MAPPINGS
-nnoremap <leader>ws :VimwikiSearchTags 
-nnoremap <leader>wrt :VimwikiRebuildTags<cr>
-"Searches for the tag my cursor is currently on
-nnoremap <leader>wft :VimwikiSearchTags <cWORD><cr> 
-
-"Opens the current wiki's html counterpoart in a new firefox tab
-nnoremap <leader>oh maggw"ayw:!firefox ~/vimwiki_html/<C-R>a<bs>.html &<cr>`a
-
-
-
-"ABBERVIATIONS
-iabbrev zett zettelkasten
-iabbrev Zett Zettelkasten
-iabbrev $$ {{$ <cr><cr>}}$
-
-
 
 "FUNCTIONS
 function! s:ZettelCreationHandler(type)
